@@ -33,9 +33,9 @@ export const player = {
         infoAlert("Saved!", 3500);
     }, 
     load() {
-        const loaded = localStorage.getItem("savefile");
+        const loaded = JSON.parse(localStorage.getItem("savefile"));
         if (!loaded) return;
-        Object.assign(this, JSON.parse(loaded));
+        Object.assign(this, loaded);
         infoAlert("Loaded!", 3500);
     },
     reset() { Object.assign(this, defaultSave); }, 
