@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title id="title">Infinity Clicker</title>
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" href="src/styles/theme.css">
+        <link rel="stylesheet" href="src/styles/style.css">
+        <script type="module" src="src/main.js" defer></script>
+    </head>
+    <body class="dark">
+        <nav>
+            <button data-nav="shop">S<p>Shop</p></button>
+            <!-- <button data-nav="upgrades">U<p>Upgrades</p></button> -->
+            <!-- <button data-nav="challenge">C<p>Challenges</p></button> -->
+            <!-- <button data-nav="infinity">I<p>Infinity</p></button> -->
+            <!-- <button data-nav="achivements">A<p>Achivements</p></button> -->
+            <div id="spacer"></div>
+            <button data-nav="options">O<p>Options</p></button>
+            <button data-nav="help">?<p>Help</p></button>
+        </nav>
+        <main>
+            <div id="header">
+                <h1 id="numberDisplayWrapper">Number:
+                    <span id="numberDisplay"></span>
+                </h1>
+                <button id="clickBtn">Click!</button>
+            </div>
+            <div id="content">
+                <div id="shopPage" class="active">
+                    <div id="shopNav">
+                        <button data-nav="npc">NPC</button>
+                        <button data-nav="nps">NPS</button>
+                        <!-- <button data-nav="gen">GEN</button> -->
+                    </div>
+                    <div id="shopWrapper">
+                        <div id="npcPage" class="active">
+                            <h3>NPC - Numbers per click</h3>
+                            <div id="wrapper" data-item="npc">
+                                <div id="shopItem" data-index="0">
+                                    <div id="name">NPC</div>
+                                    <div id="info">Amount: 1.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 50.00</button>
+                                </div>
+                                <div id="shopItem" data-index="1">
+                                    <div id="name">NPC<sup>2</sup></div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 3.50K</button>
+                                </div>
+                                <div id="shopItem" data-index="2">
+                                    <div id="name">NPC<sup>3</sup></div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 10.00K</button>
+                                </div>
+                                <div id="shopItem" data-index="3" class="locked">
+                                    <div id="name">NPC<sup>4</sup></div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 300.00K</button>
+                                </div>
+                                <div id="shopItem" data-index="4" class="locked">
+                                    <div id="name">NPC<sup>5</sup></div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 5.00M</button>
+                                </div>
+                            </div>
+                            <div id="dimensionUpgrade" data-item="npc">
+                                <span id="info">Current dimension: 3</span>
+                                <span id="req">Requires: 10 NPC<sup>3</sup></span>
+                                <button>
+                                    Reset number upgrades to increase
+                                </button>
+                            </div>
+                        </div>
+                        <div id="npsPage">
+                            <h3>NPS - Numbers per second</h3>
+                            <div id="wrapper" data-item="nps">
+                                <div id="shopItem" data-index="0">
+                                    <div id="name">NPS</div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 1.00K</button>
+                                </div>
+                                <div id="shopItem" data-index="1">
+                                    <div id="name">NPS<sup>2</sup></div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 5.00K</button>
+                                </div>
+                                <div id="shopItem" data-index="2">
+                                    <div id="name">NPS<sup>3</sup></div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 15.00K</button>
+                                </div>
+                                <div id="shopItem" data-index="3" class="locked">
+                                    <div id="name">NPS<sup>4</sup></div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 250.00K</button>
+                                </div>
+                                <div id="shopItem" data-index="4" class="locked">
+                                    <div id="name">NPS<sup>5</sup></div>
+                                    <div id="info">Amount: 0.00<br>Bought: 0.00</div>
+                                    <button>Buy<br>Cost: 5.00M</button>
+                                </div>
+                            </div>
+                            <div id="dimensionUpgrade" data-item="nps">
+                                <span id="info">Current dimension: 3</span>
+                                <span id="req">Requires: 10 NPS<sup>3</sup></span>
+                                <button>
+                                    Reset number upgrades to increase
+                                </button>
+                            </div>
+                        </div>
+                        <!-- <div id="genPage">GEN</div> -->
+                    </div>
+                </div>
+                <!-- <div id="upgradesPage">upgrades</div> -->
+                <!-- <div id="challengePage">challenge</div> -->
+                <!-- <div id="infinityPage">infinity</div> -->
+                <!-- <div id="achivementsPage">achivements</div> -->
+                <div id="optionsPage">
+                    <h3>Options</h3>
+                    <hr>
+                    <span>
+                        <label for="updateRate" id="updateRateLabel">Update
+                            Rate: 50ms</label>
+                        <input type="range" min="50" max="1200" id="updateRate">
+                    </span>
+                </div>
+                <div id="helpPage">
+                    <h3>Help</h3>
+                    <div id="colapseMenu">
+                        <h3>About Infinity Clicker</h3>
+                        <p>Infinity clicker is an incremental game, which pretty
+                            much means that you have a number that you want to
+                            increase.
+                            To make increasing it easier, you buy upgrades that
+                            set you back from your goal, but improve the speed
+                            at which you get to it.</p>
+                    </div>
+                    <div id="colapseMenu">
+                        <h3>Number</h3>
+                        <p>The number is your main currency in this game. <br>
+                            Since this game is abstract, there are
+                            no coins or physical things, there's just a number.
+                            It has no symbol so if you see for example
+                            'Cost: 10' then it cost 10 of your number. </p>
+                    </div>
+                    <div id="colapseMenu">
+                        <h3>NPC</h3>
+                        <p>NPC or Numbers Per Click is a measure of how much
+                            your number increases every click.</p>
+                    </div>
+                    <div id="colapseMenu">
+                        <h3>NPS</h3>
+                        <p>NPS stands for Numbers Per Second and it measures how
+                            much your number increases every second.</p>
+                    </div>
+                    <div id="colapseMenu">
+                        <h3>Dimensions</h3>
+                        <p>Dimensions, written as '[type]<sup>[dim]</sup>' are a
+                            fundimental part of Infinity Clicker.<br>
+                            They are quite simple: The higher dimension
+                            generates the lower dimension.<br>
+                            For example:<br>
+                            A third NPC dimension (NPC<sup>3</sup>) will
+                            generate second NPC dimensions (NPC<sup>2</sup>)<br>
+                        </p>
+                    </div>
+                    <div id="colapseMenu">
+                        <h3>Achivements</h3>
+                        <p>
+                            Achivements are small optional tasks that you can do
+                            for a small boost. <br>
+                            <i>Psst! There are some secret achivements...</i>
+                        </p>
+                    </div>
+                    <div id="colapseMenu">
+                        <h3>Upgrades</h3>
+                        <p>
+                            Upgrades make you progress faster. They can be
+                            essential things such as autobuyers or optional
+                            things like boosts
+                        </p>
+                    </div>
+                    <div id="colapseMenu">
+                        <h3>Challenges</h3>
+                        <p>
+                            Challenges are hard tasks that can an essential
+                            upgrade or give you a large boost.
+                        </p>
+                    </div>
+                    <div id="colapseMenu">
+                        <h3>Infinity</h3>
+                        <p>Comming Soon... ツ</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="alert"></div>
+    </body>
+</html>

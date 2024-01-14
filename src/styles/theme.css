@@ -1,0 +1,16 @@
+.dark {
+    --primary: #00293d;
+    --secondary: #001824;
+    --highlight: #005a87;
+    --border: #003d5c;
+    --text: #e0e3e7;
+
+    --green: #64dd17;
+    --red: #ab2836;
+    --blue: #2fa6f7;
+    --cyan: #72efdd;
+    --yellow: #ffee32;
+    --orange: #ef8e00;
+    --purple: #6639b6;
+    --magenta: #d100d1;
+}
